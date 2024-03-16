@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import LandingCard from "./components/LandingCard";
 import Navbar from "./components/Navbar";

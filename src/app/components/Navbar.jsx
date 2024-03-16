@@ -13,7 +13,7 @@ const Navbar = () => {
         <main>
             <div id='navbar' className='fixed w-screen bg-white pt-4 border-b shadow-md p-3'> 
                 <ul className='flex justify-between mr-10 min-w-60 font-extrabold'>
-                    <Image src="/cg-high-resolution-logo-black-transparent-2.png" width={40} height={40} />
+                    <Image src="/cg-high-resolution-logo-black-transparent-2.png" width={40} height={40} alt="logo"/>
                     <li className='hidden lg:block svg_hover border-b-blue-500 hover:border-b'><a href='#' >Home</a></li>
                     <li className='hidden lg:block svg_hover border-b-blue-500 hover:border-b'><a href='#'>About</a></li>
                     <li className='hidden lg:block svg_hover border-b-blue-500 hover:border-b'><a href='#'>Projects</a></li>
