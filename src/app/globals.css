@@ -14,10 +14,11 @@
   }
 }
 html {
+  transition: color 0.5s ease;
   scroll-behavior: smooth;
 }
 .head_text{
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black dark:text-white sm:text-6xl;
 }
 .gradient_text{
   @apply bg-gradient-to-r from-blue-600 via-blue-800 to-blue-500 inline-block text-transparent bg-clip-text

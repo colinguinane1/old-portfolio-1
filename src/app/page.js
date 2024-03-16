@@ -6,10 +6,10 @@ import React from "react";
 
 export default function Home() {
   return (
-    <>
+    <body className='bg-white dark:bg-[#222831]'>
     <Navbar />
     <LandingCard />
-    </>
+    </body>
   );
 }
 
