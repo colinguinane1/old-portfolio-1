@@ -8,26 +8,46 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+html {
+  scroll-behavior: smooth;
+}
+.head_text{
+  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
+}
+.gradient_text{
+  @apply bg-gradient-to-r from-blue-600 via-blue-800 to-blue-500 inline-block text-transparent bg-clip-text
+}
+.on_hover{
+  @apply hover:bg-[#00abfb] transition-all duration-200 hover:border-[#00abfb] 
+}
+.svg_hover:hover{
+  color: #00abfb;
+  border-color: #00abfb;
+}
+.svg_hover{
+  transition: all 0.3s ease;
+}
+.button_hover:hover{
+  transition: all 0.3s ease;
+  background-color: rgb(21, 0, 255);
+  color: #ffffff;
+  fill: white;
+  padding-left: 15px;
+}
+.button_hover{
+  transition: all 0.3s ease;
+}
+.menu{
+  transition: all 0.3s ease;
+}
+.rotate-up {
+  transform: rotate(90deg);
+}
+.rotate-up:hover{
+  transform: rotate(90deg);
 }
