@@ -1,6 +1,6 @@
 const TechStack = () => {
   return (
-    <main className="flex flex-col items-center mx-5 md:mt-[-400px] -mt-[200px] lg:-mt-[400px]">
+    <main className="flex flex-col items-center mx-5 md:mt-[-400px] -mt-[0px] lg:-mt-[400px]">
     <div className="w-full max-w-[64rem] ">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-md p-3 rounded-md">
           {/*HTML ICON CONTAINER*/}
@@ -118,7 +118,7 @@ const TechStack = () => {
 
           {/*TAILWIND ICON */}
           <div className="ts_css hover:shadow-teal-400 group">
-          <h1 className="ts_tooltip text-teal-500">TailwindCSS</h1>
+          <h1 className="ts_tooltip text-teal-500">Tailwind</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-tailwind dark:stroke-white hover:stroke-teal-400 dark:hover:stroke-teal-400"
