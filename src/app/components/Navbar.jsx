@@ -1,7 +1,7 @@
 "use client"
 import { useState } from 'react';
 import Image from 'next/image';
-import Index from './index.jsx';
+
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
