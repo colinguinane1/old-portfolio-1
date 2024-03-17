@@ -25,7 +25,7 @@ body{
 }
 
 .head_text{
-  @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black dark:text-white sm:text-6xl;
+  @apply mt-5 text-4xl font-extrabold leading-[1.15] text-black dark:text-white sm:text-6xl;
 }
 .gradient_text{
   @apply bg-gradient-to-r from-blue-600 via-blue-800 to-blue-500 inline-block text-transparent bg-clip-text
@@ -38,6 +38,12 @@ body{
   @apply dark:text-white;
   transition: 0s ease;
   
+}
+.ts_css{
+  @apply border rounded-md shadow-md border-white dark:border-[#31363F] max-w-fit p-2 flex mx-2
+}
+.ts_tooltip{
+  @apply absolute ml-16 font-extrabold scale-100 md:scale-0 lg:scale-0 group-hover:scale-100 dark:bg-[#222831]  bg-gray-200 p-2 rounded-lg
 }
 
 .svg_hover:hover{

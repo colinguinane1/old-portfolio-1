@@ -17,9 +17,7 @@ function Index() {
             <Navbar />
             <LandingCard />
             <TechStack />
-            <footer>
             <Footer />
-            </footer>
             <button onClick={toggleDarkMode} className='fixed hover:p-4 bottom-0 right-0 mb-5 mr-5 bg-[#31363F] dark:bg-white dark:text-black text-white p-3 rounded-full'>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brightness-up dark:stroke-black" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>

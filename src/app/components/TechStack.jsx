@@ -1,12 +1,11 @@
-import Image from "next/image";
-
 const TechStack = () => {
   return (
-    <main className="flex flex-col items-center mx-5 -mt-96">
-      <div className="border rounded-md shadow-md border-white dark:border-[#31363F] dark:bg-[#31363F] p-10 mt-20 flex flex-col md:flex-row items-center justify-between">
-        <div className="order-2 md:order-1 md:text-left md:mr-4 mb-4 md:mb-0 flex">
+    <main className="flex flex-col items-center mx-5 md:mt-[-400px] -mt-[200px] lg:-mt-[400px]">
+    <div className="w-full max-w-[64rem] ">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-md p-3 rounded-md">
           {/*HTML ICON CONTAINER*/}
-          <div className="border rounded-md shadow-md border-white dark:border-[#31363F] max-w-fit p-2 flex mx-2 hover:shadow-orange-500">
+          <div className="ts_css hover:shadow-orange-500 group">
+            <h1 className="ts_tooltip text-orange-500">HTML5</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-brand-html5 dark:stroke-white hover:stroke-orange-500 dark:hover:stroke-orange-500"
@@ -26,7 +25,8 @@ const TechStack = () => {
           </div>
 
           {/*CSS ICON */}
-          <div className="border rounded-md shadow-md border-white dark:border-[#31363F] max-w-fit p-2 flex mx-2 hover:shadow-blue-600">
+          <div className="ts_css hover:shadow-blue-600 group">
+          <h1 className="ts_tooltip text-blue-600">CSS</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-brand-css3 hover:stroke-blue-600 dark:stroke-white dark:hover:stroke-blue-600 "
@@ -46,10 +46,11 @@ const TechStack = () => {
           </div>
 
           {/*JS ICON */}
-          <div className="border rounded-md shadow-md border-white dark:border-[#31363F] max-w-fit p-2 flex mx-2 hover:shadow-yellow-300 ">
+          <div className="ts_css hover:shadow-yellow-300 group">
+          <h1 className="ts_tooltip dark:text-yellow-300 text-yellow-600">JavaScript</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-javascript dark:stroke-white dark:stroke-white hover:stroke-yellow-600 dark:hover:stroke-yellow-600"
+              class="icon icon-tabler icon-tabler-brand-javascript dark:stroke-white hover:stroke-yellow-300 dark:hover:stroke-yellow-300"
               className=""
               width="44"
               height="44"
@@ -68,7 +69,8 @@ const TechStack = () => {
           </div>
 
           {/*NEXTJS ICON */}
-          <div className="border rounded-md shadow-md border-white dark:border-[#31363F] max-w-fit p-2 flex mx-2 hover:shadow-gray-500 ">
+          <div className="ts_css hover:shadow-gray-500 group ">
+          <h1 className="ts_tooltip text-gray-500">Next.JS</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-nextjs dark:stroke-white dark:hover:stroke-gray-500 hover:stroke-gray-500"
@@ -88,10 +90,11 @@ const TechStack = () => {
           </div>
 
           {/*REACT ICON */}
-          <div className="border rounded-md shadow-md border-white dark:border-[#31363F] max-w-fit p-2 flex mx-2 hover:shadow-blue-600 ">
+          <div className="ts_css hover:shadow-blue-600 group ">
+          <h1 className="ts_tooltip text-blue-600">React</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-react"
+              class="icon icon-tabler icon-tabler-brand-react dark:stroke-white dark:hover:stroke-blue-600 hover:stroke-blue-600"
               className="dark:stroke-white dark:hover:stroke-blue-600 hover:stroke-blue-600"
               width="44"
               height="44"
@@ -114,11 +117,12 @@ const TechStack = () => {
           </div>
 
           {/*TAILWIND ICON */}
-          <div className="border rounded-md shadow-md border-white dark:border-[#31363F] max-w-fit p-2 flex mx-2 hover:shadow-teal-400 ">
+          <div className="ts_css hover:shadow-teal-400 group">
+          <h1 className="ts_tooltip text-teal-500">TailwindCSS</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-brand-tailwind"
-              className='dark:stroke-white hover:stroke-teal-400 dark:hover:stroke-teal-400'
+              class="icon icon-tabler icon-tabler-brand-tailwind dark:stroke-white hover:stroke-teal-400 dark:hover:stroke-teal-400"
+              className="dark:stroke-white hover:stroke-teal-400 dark:hover:stroke-teal-400"
               width="44"
               height="44"
               viewBox="0 0 24 24"
@@ -130,6 +134,27 @@ const TechStack = () => {
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z" />
+            </svg>
+          </div>
+
+          {/*FRAMER MOTION ICON */}
+          <div className="ts_css hover:shadow-pink-500 group">
+          <h1 className="ts_tooltip text-pink-500">Framer Motion</h1>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-framer-motion dark:stroke-white dark:hover:stroke-pink-500 stroke-black hover:stroke-pink-500 "
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#2c3e50"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12l-8 -8v16l16 -16v16l-4 -4" />
+              <path d="M20 12l-8 8l-4 -4" />
             </svg>
           </div>
         </div>

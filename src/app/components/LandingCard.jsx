@@ -3,7 +3,7 @@ import Image from "next/image";
 function LandingCard() {
   return (
     <main className='flex flex-col items-center h-screen mx-5'>
-      <div className='border rounded-md shadow-md border-white dark:border-[#31363F] dark:bg-[#31363F] w-fit p-10 mt-20 flex flex-col md:flex-row items-center'>
+      <div className='border rounded-md shadow-md border-white dark:border-[#31363F] dark:bg-[#31363F] w-fit max-w-5xl p-10 mt-20 flex flex-col md:flex-row items-center'>
         <div className='order-2 md:order-1 md:text-left md:mr-4 mb-4 md:mb-0'>
           <h1 className='head_text text-left'>Hi, I&apos;m <span className='gradient_text'>Colin</span></h1><br></br>
           <p className='lg:max-w-5xl dark:text-white'>I&apos;m a passionate front-end developer who loves creating responsive web designs and solving problems.</p><br></br>

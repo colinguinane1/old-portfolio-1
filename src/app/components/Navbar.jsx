@@ -11,7 +11,7 @@ const Navbar = () => {
     };
 
     return (
-        <main>
+        <main className='z-100'>
             <div id='navbar' className='fixed w-screen bg-white dark:bg-[#31363F] pt-4 border-b border-white dark:border-gray-900 shadow-md p-3'> 
                 <ul className='flex justify-between mr-10 min-w-60 font-extrabold dark:text-white'>
                     <h1 className='font-extrabold text-xl -mt-2 border-2 p-1 text-black border-black dark:text-white dark:border-white'>CG</h1>
