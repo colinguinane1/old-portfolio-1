@@ -20,6 +20,9 @@
 .dark {
   background-color: #222831;
 }
+body{
+  min-height: fit-content;
+}
 
 .head_text{
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black dark:text-white sm:text-6xl;
@@ -28,15 +31,19 @@
   @apply bg-gradient-to-r from-blue-600 via-blue-800 to-blue-500 inline-block text-transparent bg-clip-text
 }
 .on_hover{
-  @apply hover:bg-[#00abfb] hover:border-[#00abfb] 
+  @apply hover:bg-[#00abfb] hover:border-[#00abfb];
+  transition: 0s ease;
 }
 .svg_hover{
-  @apply dark:text-white
+  @apply dark:text-white;
+  transition: 0s ease;
+  
 }
 
 .svg_hover:hover{
   color: #00abfb;
   border-color: #00abfb;
+  transition: 0s ease;
 }
 .button_hover:hover{
   background-color: rgb(21, 0, 255);
@@ -47,6 +54,7 @@
 .button_hover{
 }
 .menu{
+  transition: 0s ease;
 }
 .rotate-up {
   transform: rotate(90deg);

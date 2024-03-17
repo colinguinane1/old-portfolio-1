@@ -7,7 +7,7 @@ import Index from "./components/Index";
 
 export default function Home() {
   return (
-    <body className="dark:bg-black">
+    <body className="dark:bg-black min-h-fit">
      <Index></Index>
     </body>
   );
