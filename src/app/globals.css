@@ -13,10 +13,14 @@
     text-wrap: balance;
   }
 }
-html {
-  transition: color 0.5s ease;
+* {
+  transition: all 0.2s ease;
   scroll-behavior: smooth;
 }
+.dark {
+  background-color: #222831;
+}
+
 .head_text{
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black dark:text-white sm:text-6xl;
 }
@@ -24,27 +28,25 @@ html {
   @apply bg-gradient-to-r from-blue-600 via-blue-800 to-blue-500 inline-block text-transparent bg-clip-text
 }
 .on_hover{
-  @apply hover:bg-[#00abfb] transition-all duration-200 hover:border-[#00abfb] 
+  @apply hover:bg-[#00abfb] hover:border-[#00abfb] 
 }
+.svg_hover{
+  @apply dark:text-white
+}
+
 .svg_hover:hover{
   color: #00abfb;
   border-color: #00abfb;
 }
-.svg_hover{
-  transition: all 0.3s ease;
-}
 .button_hover:hover{
-  transition: all 0.3s ease;
   background-color: rgb(21, 0, 255);
   color: #ffffff;
   fill: white;
   padding-left: 15px;
 }
 .button_hover{
-  transition: all 0.3s ease;
 }
 .menu{
-  transition: all 0.3s ease;
 }
 .rotate-up {
   transform: rotate(90deg);

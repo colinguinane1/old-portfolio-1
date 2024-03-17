@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react';
 import Image from 'next/image';
+import Index from './index.jsx';
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
         <main>
             <div id='navbar' className='fixed w-screen bg-white dark:bg-[#31363F] pt-4 border-b border-white dark:border-gray-900 shadow-md p-3'> 
                 <ul className='flex justify-between mr-10 min-w-60 font-extrabold dark:text-white'>
-                    <Image src="/cg-high-resolution-logo-black-transparent-2.png" width={40} height={40} alt="logo"/>
+                    <h1 className='font-extrabold text-xl -mt-2 border-2 p-1 text-black border-black dark:text-white dark:border-white'>CG</h1>
                     <li className='hidden lg:block svg_hover border-b-blue-500 hover:border-b'><a href='#' >Home</a></li>
                     <li className='hidden lg:block svg_hover border-b-blue-500 hover:border-b'><a href='#'>About</a></li>
                     <li className='hidden lg:block svg_hover border-b-blue-500 hover:border-b'><a href='#'>Projects</a></li>
@@ -28,8 +29,8 @@ const Navbar = () => {
                     </button>
                 </ul>
             </div>
-            <div className={showMenu ? '' : '-ml-[200vw] transition-all duration-400'}>
-                <ul id='sm_navbar' className='fixed text-6xl p-6 h-screen mt-12 w-screen border border-white dark:border-[#31363F] shadow-md font-bold z-10 bg-white dark:bg-[#31363F] text-black dark:text-white'>
+            <div className={showMenu ? '' : '-ml-[200vw] transition-all duration-1000'}>
+                <ul id='sm_navbar' className='fixed text-6xl p-6 h-screen mt-12 w-screen border border-white dark:border-[#31363F] shadow-md font-bold z-10 backdrop-blur-lg dark:backdrop-blur-lg text-black dark:text-white'>
                     <li className='svg_hover py-4'><a href='#'>Home</a></li>
                     <li className='svg_hover py-4'><a href='#'>About</a></li>
                     <li className='svg_hover py-4'><a href='#'>Projects</a></li>
