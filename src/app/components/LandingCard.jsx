@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { motion, spring } from "framer-motion";
 
 function LandingCard() {
   return (
@@ -27,12 +28,12 @@ function LandingCard() {
 
 {/* source code button*/}
         </div><br></br> 
-        <button onClick={() => window.location.href = 'https://github.com/colinguinane1/PortfolioNEXT'}className='button_blue_gradient'>Source Code<svg className='mt-[2px] pl-1'xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <motion.button initial={{scale: 0}} animate={{scale: 1}} transition={{type: spring, delay: 0.3}} onClick={() => window.location.href = 'https://github.com/colinguinane1/PortfolioNEXT'}className='button_blue_gradient'>Source Code<svg className='mt-[2px] pl-1'xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M5 12l14 0" />
   <path d="M15 16l4 -4" />
   <path d="M15 8l4 4" />
-</svg></button>
+</svg></motion.button>
         </div>
         <div className='order-1 md:order-2'>
           <Image src="/hero.jpg" width={200} height={200} className='rounded-full border-2 border-black dark:border-white' alt="pfp" />
