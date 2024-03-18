@@ -1,8 +1,8 @@
 const TechStack = () => {
   return (
-    <main className="flex flex-col items-center mx-5 md:mt-[-400px] -mt-[0px] lg:-mt-[400px]">
+    <main className="flex flex-col items-center mx-5">
     <div className="w-full max-w-[64rem] ">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-md p-3 rounded-md">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-lg p-3 rounded-md">
           {/*HTML ICON CONTAINER*/}
           <div className="ts_css hover:shadow-orange-500 group">
             <h1 className="ts_tooltip text-orange-500">HTML5</h1>

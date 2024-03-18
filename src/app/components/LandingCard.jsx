@@ -2,8 +2,8 @@ import Image from "next/image";
 
 function LandingCard() {
   return (
-    <main className='flex flex-col items-center h-screen mx-5'>
-      <div className='border rounded-md shadow-md border-white dark:border-[#31363F] dark:bg-[#31363F] w-fit max-w-5xl p-10 mt-20 flex flex-col md:flex-row items-center'>
+    <main className='flex flex-col items-center h-fit pb-10 mx-5'>
+      <div className='border rounded-md shadow-lg border-white dark:border-[#31363F] dark:bg-[#31363F] w-fit max-w-5xl p-10 mt-24 flex flex-col md:flex-row items-center'>
         <div className='order-2 md:order-1 md:text-left md:mr-4 mb-4 md:mb-0'>
           <h1 className='head_text text-left'>Hi, I&apos;m <span className='gradient_text'>Colin</span></h1><br></br>
           <p className='lg:max-w-5xl dark:text-white'>I&apos;m a passionate front-end developer who loves creating responsive web designs and solving problems.</p><br></br>
@@ -27,7 +27,7 @@ function LandingCard() {
 
 {/* source code button*/}
         </div><br></br> 
-        <button onClick={() => window.location.href = 'https://github.com/colinguinane1/PortfolioNEXT'}className='button_hover flex bg-blue-600 p-2 px-3 rounded-full text-white font-bold'>Source Code<svg className='mt-[2px] pl-1'xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <button onClick={() => window.location.href = 'https://github.com/colinguinane1/PortfolioNEXT'}className='button_blue_gradient'>Source Code<svg className='mt-[2px] pl-1'xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-narrow-right" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
   <path d="M5 12l14 0" />
   <path d="M15 16l4 -4" />
