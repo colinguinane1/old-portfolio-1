@@ -1,11 +1,23 @@
+import { motion } from "framer-motion";
+import { useState } from "react";
+import Modal from "./Modal";
+
 const TechStack = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const close = () => setModalOpen(false);
+  const open = () => setModalOpen(true);
+
   return (
     <main className="flex flex-col items-center mx-5">
     <div className="w-full max-w-[64rem] ">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-lg p-3 rounded-md">
+        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
           {/*HTML ICON CONTAINER*/}
-          <div className="ts_css hover:shadow-orange-500 group">
-            <h1 className="ts_tooltip text-orange-500">HTML5</h1>
+          <div className="ts_css hover:shadow-orange-500 group" onClick={() => (modalOpen ? close() : open())}>
+            
+            <h1 className="ts_tooltip text-orange-500" >HTML5</h1>
+            
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-brand-html5 dark:stroke-white hover:stroke-orange-500 dark:hover:stroke-orange-500"
