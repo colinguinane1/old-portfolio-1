@@ -22,7 +22,7 @@ const CSSModal = () => {
             </svg>
       <div className='text-center'>
       <h1 className="font-extrabold text-2xl dark:text-white">Cascading Style Sheets</h1>
-      <p className='dark:text-white'>CSS is the most basic form of styling a website, it's not commonly used in its base form but its a must-know for any web developer.</p>
+      <p className='dark:text-white'>CSS is the most basic form of styling a website, it&apos;s not commonly used in its base form but its a must-know for any web developer.</p>
       </div>
     </div>
   );
