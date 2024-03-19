@@ -1,11 +1,14 @@
-import { motion } from "framer-motion"
+import React from "react";
 
 const Backdrop = ({ children, onClick }) => {
-    
-    return(
-       <motion.div className='backdrop' initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}></motion.div>
-    
-    )
-}
+  return (
+    <div
+      className="fixed top-0 left-0 w-full h-full bg-black opacity-75 z-50"
+      onClick={onClick}
+    >
+      {children}
+    </div>
+  );
+};
 
-export default Backdrop
+export default Backdrop;

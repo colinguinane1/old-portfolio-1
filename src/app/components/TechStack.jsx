@@ -4,17 +4,23 @@ import Modal from "./Modal";
 
 const TechStack = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState(null);
 
-  const close = () => setModalOpen(false);
-  const open = () => setModalOpen(true);
+  const close = () => {
+    setModalOpen(false);
+    setModalContent(null); // Reset modal content when closing
+  };
 
+  const open = (content) => {
+    setModalContent(content);
+    setModalOpen(true);
+  };
   return (
     <main className="flex flex-col items-center mx-5">
     <div className="w-full max-w-[64rem] ">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-lg p-3 rounded-md">
-        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
           {/*HTML ICON CONTAINER*/}
-          <div className="ts_css hover:shadow-orange-500 group" onClick={() => (modalOpen ? close() : open())}>
+          <div className="ts_css hover:shadow-orange-500 group cursor-pointer hover:scale-105 active:scale-95" onClick={() => (modalOpen ? close() : open("HTML Content"))}>
             
             <h1 className="ts_tooltip text-orange-500" >HTML5</h1>
             
@@ -37,7 +43,7 @@ const TechStack = () => {
           </div>
 
           {/*CSS ICON */}
-          <div className="ts_css hover:shadow-blue-600 group">
+          <div className="ts_css hover:shadow-blue-600 group" onClick={() => (modalOpen ? close() : open("CSS Content"))}>
           <h1 className="ts_tooltip text-blue-600">CSS</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +64,7 @@ const TechStack = () => {
           </div>
 
           {/*JS ICON */}
-          <div className="ts_css hover:shadow-yellow-300 group">
+          <div className="ts_css hover:shadow-yellow-300 group" onClick={() => (modalOpen ? close() : open("JavaScript Content"))}>
           <h1 className="ts_tooltip dark:text-yellow-300 text-yellow-600">JavaScript</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +87,7 @@ const TechStack = () => {
           </div>
 
           {/*NEXTJS ICON */}
-          <div className="ts_css hover:shadow-gray-500 group ">
+          <div className="ts_css hover:shadow-gray-500 group" onClick={() => (modalOpen ? close() : open("NEXTJS Content"))}>
           <h1 className="ts_tooltip text-gray-500">Next.JS</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +108,7 @@ const TechStack = () => {
           </div>
 
           {/*REACT ICON */}
-          <div className="ts_css hover:shadow-blue-600 group ">
+          <div className="ts_css hover:shadow-blue-600 group" onClick={() => (modalOpen ? close() : open("React Content"))}>
           <h1 className="ts_tooltip text-blue-600">React</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +135,7 @@ const TechStack = () => {
           </div>
 
           {/*TAILWIND ICON */}
-          <div className="ts_css hover:shadow-teal-400 group">
+          <div className="ts_css hover:shadow-teal-400 group" onClick={() => (modalOpen ? close() : open("Tailwind Content"))}>
           <h1 className="ts_tooltip text-teal-500">Tailwind</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +156,7 @@ const TechStack = () => {
           </div>
 
           {/*FRAMER MOTION ICON */}
-          <div className="ts_css hover:shadow-pink-500 group">
+          <div className="ts_css hover:shadow-pink-500 group" onClick={() => (modalOpen ? close() : open("Framer Motion Content"))}>
           <h1 className="ts_tooltip text-pink-500">Framer Motion</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -171,6 +177,7 @@ const TechStack = () => {
           </div>
         </div>
       </div>
+      {modalOpen && <Modal handleClose={close} content={modalContent} />}
     </main>
   );
 };

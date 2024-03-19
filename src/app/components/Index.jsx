@@ -24,6 +24,7 @@ function Index() {
                 initial={{ y: -100 }} // Initial position above the viewport
                 animate={{ y: 0 }} // Animation to slide in from the top
                 transition={{ type: "spring", stiffness: 50 }} // Adjust animation parameters as needed
+                className='no_transition'
             >
                 <Navbar />
                 <button
