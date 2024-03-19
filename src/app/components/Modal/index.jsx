@@ -2,23 +2,43 @@
 import React from "react";
 import Backdrop from "../Backdrop";
 import { motion } from "framer-motion";
+import HTMLModal from "./HTML";
 
 const Modal = ({ handleClose, content }) => {
   return (
-    <div>
-    <Backdrop onClick={handleClose} />
+    <div className="fixed -mt-[25rem] md:-mt-[10rem] flex flex-col items-center max-w-[20rem]">
+      <Backdrop onClick={handleClose} />
       <motion.div
-        className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-md shadow-lg z-[10000] no_transition"
+        className="transform bg-white p-6 rounded-md dark:bg-[#31363F] shadow-lg z-[10000] no_transition"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
         style={{ opacity: 1 }}
-        transition={{duration: 0.1}}
+        transition={{ duration: 0.1 }}
       >
         <h1>{content}</h1>
-        <button className='absolute top-1 right-1' onClick={handleClose}>X</button>
+        <button className="absolute top-1 right-1" onClick={handleClose}>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-arrow-up-right stroke-black dark:stroke-white hover:stroke-blue-500 dark:hover:stroke-blue-500"
+              width="44"
+              height="44"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="#2c3e50"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M17 7l-10 10" />
+              <path d="M8 7l9 0l0 9" />
+            </svg>
+          </div>
+        </button>
       </motion.div>
-      </div>
+    </div>
   );
 };
 
