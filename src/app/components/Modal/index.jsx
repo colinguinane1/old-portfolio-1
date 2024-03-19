@@ -23,16 +23,21 @@ const dropIn = {
 }
 
 const Modal = ({ handleClose, text}) => {
+    return(
     <Backdrop onClick={handleClose}>
 <motion.div
 onClick={(e) => e.stopPropagation()}
 className="modal orange-gradient"
 variants={dropIn}
 >
+    <div className='absolute top-30 left-40'>
+        <h1>Gello</h1>
+    </div>
 
 </motion.div>
-
+    
     </Backdrop>
+    )
 };
 
 export default Modal;

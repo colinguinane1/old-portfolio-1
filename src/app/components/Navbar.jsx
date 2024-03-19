@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { motion, spring } from "framer-motion";
 
 const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -52,8 +53,11 @@ const Navbar = () => {
           </button>
         </ul>
       </div>
-      <div
-        className={showMenu ? "" : "-ml-[200vw] transition-all duration-1000"}
+      <motion.div
+      initial={{marginLeft: "-300vw"}}
+      animate={{ marginLeft: showMenu ? 0 : "-300vw" }}
+      transition={{type: spring}}
+      className="no_transition"
       >
         <ul
           id="sm_navbar"
@@ -72,7 +76,7 @@ const Navbar = () => {
             <a href="#">Contact</a>
           </li>
         </ul>
-      </div>
+      </motion.div>
     </main>
   );
 };

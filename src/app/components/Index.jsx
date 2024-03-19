@@ -5,15 +5,10 @@ import { useState, useEffect } from "react";
 import TechStack from "./TechStack";
 import Footer from "./Footer";
 import Head from "next/head";
-import { motion, useAnimation } from "framer-motion";
+import { motion, } from "framer-motion";
 
 function Index() {
     const [darkMode, setDarkMode] = useState(false);
-    const controls = useAnimation();
-
-    useEffect(() => {
-        controls.start({ opacity: 1, y: 0 }); // Start animation on mount
-    }, [controls]);
 
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
