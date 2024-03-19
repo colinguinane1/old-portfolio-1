@@ -10,7 +10,11 @@ import { Analytics } from "@vercel/analytics/react"
 export default function Home() {
   return (
     <body className="dark:bg-black min-h-fit">
+      <>
+      <Analytics/>
+      <SpeedInsights/>
      <Index></Index>
+     </>
     </body>
   );
 }
