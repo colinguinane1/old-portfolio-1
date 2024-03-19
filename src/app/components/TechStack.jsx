@@ -28,7 +28,7 @@ const TechStack = () => {
     <div className="w-full max-w-[64rem] ">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-lg p-3 rounded-md">
           {/*HTML ICON CONTAINER*/}
-          <div className="ts_css hover:shadow-orange-500 group cursor-pointer hover:scale-105 active:scale-95" onClick={() => (modalOpen ? close() : open(<HTMLModal/>))}>
+          <div className="ts_css hover:shadow-orange-500 group cursor-pointer" onClick={() => (modalOpen ? close() : open(<HTMLModal/>))}>
             
             <h1 className="ts_tooltip text-orange-500" >HTML5</h1>
             
@@ -51,7 +51,7 @@ const TechStack = () => {
           </div>
 
           {/*CSS ICON */}
-          <div className="ts_css hover:shadow-blue-600 group" onClick={() => (modalOpen ? close() : open(<CSSModal/>))}>
+          <div className="ts_css hover:shadow-blue-600 group " onClick={() => (modalOpen ? close() : open(<CSSModal/>))}>
           <h1 className="ts_tooltip text-blue-600">CSS</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"

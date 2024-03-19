@@ -2,14 +2,17 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, spring } from "framer-motion";
+import Modal from "./Modal";
+import TechStack from "./TechStack";
 
-const Navbar = () => {
+const Navbar = ({ closeModal }) => {
   const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+    closeModal(); // Close any open modals
   };
-
+  
   return (
     <main className='z-[10]'>
       <div

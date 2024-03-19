@@ -6,7 +6,7 @@ import HTMLModal from "./HTML";
 
 const Modal = ({ handleClose, content }) => {
   return (
-    <div className="fixed -mt-[25rem] md:-mt-[10rem] flex flex-col items-center max-w-[20rem]">
+    <div className="fixed -mt-[33rem] md:-mt-[10rem] flex flex-col items-center max-w-[20rem]">
       <Backdrop onClick={handleClose} />
       <motion.div
         className="transform bg-white p-6 rounded-md dark:bg-[#31363F] shadow-lg z-[10000] no_transition"
