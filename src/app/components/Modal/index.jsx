@@ -13,8 +13,7 @@ const Modal = ({ handleClose, content }) => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
-        style={{ opacity: 1 }}
-        transition={{ duration: 0.1 }}
+        transition={{ duration: 0.3 }}
       >
         <h1>{content}</h1>
         <button className="absolute top-1 right-1" onClick={handleClose}>

@@ -187,7 +187,9 @@ const TechStack = () => {
             className="ts_css hover:shadow-pink-500 group"
             onClick={() => (modalOpen ? close() : open(<FramerModal />))}
           >
-            <h1 className="ts_tooltip text-pink-500">Framer Motion</h1>
+            <h1 className="ts_tooltip text-pink-500 min-w-[7.5rem]">
+              Framer Motion
+            </h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-framer-motion dark:stroke-white dark:hover:stroke-pink-500 stroke-black hover:stroke-pink-500 "

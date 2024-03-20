@@ -13,17 +13,17 @@ const About = () => {
               improving myself on and i make sure to use the latest tech to
               build my websites.
             </p>
-            <div className="grid grid-cols-2 grid-rows-2 grid-flow-col pb-4 md:max-w-[48rem] max-w-[15rem]">
+            <div className="grid grid-cols-2 grid-rows-2 grid-flow-col pb-2 md:max-w-[48rem] max-w-[36rem] pr-6">
               <h1 className="font-extrabold text-blue-500">LOCATED</h1>
               <a
-                className="text-black dark:text-white"
+                className="text-black dark:text-white hover:font-bold"
                 href="https://www.google.com/maps/place/Edmonton,+AB/@53.5250615,-114.1157172,10z/data=!3m1!4b1!4m6!3m5!1s0x53a0224580deff23:0x411fa00c4af6155d!8m2!3d53.5460983!4d-113.4937266!16zL20vMG5saDc?entry=ttu"
               >
                 Edmonton, AB, Canada
               </a>
               <h1 className="font-extrabold text-blue-500">MAIL</h1>
               <a
-                className="dark:text-white text-black"
+                className="dark:text-white text-black max-w-[2rem] hover:font-bold"
                 href="mailto:collab.colin@gmail.com"
               >
                 collab.colin@gmail.com

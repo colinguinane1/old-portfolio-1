@@ -43,7 +43,7 @@
   @apply border hover:scale-105 active:scale-95 rounded-md shadow-md border-white dark:border-[#31363F] max-w-fit p-2 flex mx-2
 }
 .ts_tooltip{
-  @apply absolute ml-16 font-extrabold scale-100 md:scale-0 lg:scale-0 group-hover:scale-100 dark:bg-[#222831]  bg-gray-200 p-2 rounded-lg text-sm md:text-base;
+  @apply absolute ml-16 font-extrabold scale-100 md:scale-0 lg:scale-0 group-hover:scale-100 dark:bg-[#222831]  bg-gray-200 p-2 rounded-lg text-sm md:text-base overflow-hidden;
   z-index: 0;
 }
 .backdrop{
