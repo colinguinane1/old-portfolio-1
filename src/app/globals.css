@@ -28,7 +28,7 @@
   @apply mt-5 text-4xl font-extrabold leading-[1.15] text-black dark:text-white sm:text-6xl;
 }
 .gradient_text{
-  @apply bg-gradient-to-r from-blue-600 via-blue-800 to-blue-500 inline-block text-transparent bg-clip-text
+  @apply bg-gradient-to-r from-blue-400 via-teal-500 to-blue-600 inline-block text-transparent bg-clip-text
 }
 .on_hover{
   @apply hover:bg-[#00abfb] hover:border-[#00abfb];

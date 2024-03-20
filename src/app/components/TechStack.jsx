@@ -25,13 +25,15 @@ const TechStack = () => {
   };
   return (
     <main className="flex flex-col items-center mx-5">
-    <div className="w-full max-w-[64rem] ">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-lg p-3 rounded-md">
+      <div className="w-full max-w-[64rem] ">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-lg p-3 rounded-md">
           {/*HTML ICON CONTAINER*/}
-          <div className="ts_css hover:shadow-orange-500 group cursor-pointer" onClick={() => (modalOpen ? close() : open(<HTMLModal/>))}>
-            
-            <h1 className="ts_tooltip text-orange-500" >HTML5</h1>
-            
+          <div
+            className="ts_css hover:shadow-orange-500 group cursor-pointer"
+            onClick={() => (modalOpen ? close() : open(<HTMLModal />))}
+          >
+            <h1 className="ts_tooltip text-orange-500">HTML5</h1>
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-brand-html5 dark:stroke-white hover:stroke-orange-500 dark:hover:stroke-orange-500"
@@ -51,8 +53,11 @@ const TechStack = () => {
           </div>
 
           {/*CSS ICON */}
-          <div className="ts_css hover:shadow-blue-600 group " onClick={() => (modalOpen ? close() : open(<CSSModal/>))}>
-          <h1 className="ts_tooltip text-blue-600">CSS</h1>
+          <div
+            className="ts_css hover:shadow-blue-600 group "
+            onClick={() => (modalOpen ? close() : open(<CSSModal />))}
+          >
+            <h1 className="ts_tooltip text-blue-600">CSS</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-brand-css3 hover:stroke-blue-600 dark:stroke-white dark:hover:stroke-blue-600 "
@@ -72,8 +77,13 @@ const TechStack = () => {
           </div>
 
           {/*JS ICON */}
-          <div className="ts_css hover:shadow-yellow-300 group" onClick={() => (modalOpen ? close() : open(<JavaScriptModal/>))}>
-          <h1 className="ts_tooltip dark:text-yellow-300 text-yellow-600">JavaScript</h1>
+          <div
+            className="ts_css hover:shadow-yellow-300 group"
+            onClick={() => (modalOpen ? close() : open(<JavaScriptModal />))}
+          >
+            <h1 className="ts_tooltip dark:text-yellow-300 text-yellow-600">
+              JavaScript
+            </h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-javascript dark:stroke-white hover:stroke-yellow-300 dark:hover:stroke-yellow-300"
@@ -95,8 +105,11 @@ const TechStack = () => {
           </div>
 
           {/*NEXTJS ICON */}
-          <div className="ts_css hover:shadow-gray-500 group" onClick={() => (modalOpen ? close() : open(<NEXTJSModal />))}>
-          <h1 className="ts_tooltip text-gray-500">Next.JS</h1>
+          <div
+            className="ts_css hover:shadow-gray-500 group"
+            onClick={() => (modalOpen ? close() : open(<NEXTJSModal />))}
+          >
+            <h1 className="ts_tooltip text-gray-500">Next.JS</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-nextjs dark:stroke-white dark:hover:stroke-gray-500 hover:stroke-gray-500"
@@ -116,8 +129,11 @@ const TechStack = () => {
           </div>
 
           {/*REACT ICON */}
-          <div className="ts_css hover:shadow-blue-600 group" onClick={() => (modalOpen ? close() : open(<ReactModal />))}>
-          <h1 className="ts_tooltip text-blue-600">React</h1>
+          <div
+            className="ts_css hover:shadow-blue-600 group"
+            onClick={() => (modalOpen ? close() : open(<ReactModal />))}
+          >
+            <h1 className="ts_tooltip text-blue-600">React</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-react dark:stroke-white dark:hover:stroke-blue-600 hover:stroke-blue-600"
@@ -143,8 +159,11 @@ const TechStack = () => {
           </div>
 
           {/*TAILWIND ICON */}
-          <div className="ts_css hover:shadow-teal-400 group" onClick={() => (modalOpen ? close() : open(<TailwindModal />))}>
-          <h1 className="ts_tooltip text-teal-500">Tailwind</h1>
+          <div
+            className="ts_css hover:shadow-teal-400 group"
+            onClick={() => (modalOpen ? close() : open(<TailwindModal />))}
+          >
+            <h1 className="ts_tooltip text-teal-500">Tailwind</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-tailwind dark:stroke-white hover:stroke-teal-400 dark:hover:stroke-teal-400"
@@ -164,8 +183,11 @@ const TechStack = () => {
           </div>
 
           {/*FRAMER MOTION ICON */}
-          <div className="ts_css hover:shadow-pink-500 group" onClick={() => (modalOpen ? close() : open(<FramerModal />))}>
-          <h1 className="ts_tooltip text-pink-500">Framer Motion</h1>
+          <div
+            className="ts_css hover:shadow-pink-500 group"
+            onClick={() => (modalOpen ? close() : open(<FramerModal />))}
+          >
+            <h1 className="ts_tooltip text-pink-500">Framer Motion</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="icon icon-tabler icon-tabler-brand-framer-motion dark:stroke-white dark:hover:stroke-pink-500 stroke-black hover:stroke-pink-500 "
