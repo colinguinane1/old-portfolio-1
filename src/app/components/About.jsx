@@ -13,7 +13,7 @@ const About = () => {
               improving myself on and i make sure to use the latest tech to
               build my websites.
             </p>
-            <div className="grid grid-cols-2 grid-rows-2 grid-flow-col pb-4">
+            <div className="grid grid-cols-2 grid-rows-2 grid-flow-col pb-4 max-w-[15rem]">
               <h1 className="font-extrabold text-blue-500">LOCATED</h1>
               <a
                 className="text-black dark:text-white"
