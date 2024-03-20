@@ -7,7 +7,9 @@ import Footer from "./Footer";
 import Head from "next/head";
 import About from "./About";
 import RepoAPI from "./RepoAPI";
+import Projects from "./Projects";
 import { motion } from "framer-motion";
+import { Contact } from "./Contact";
 
 function Index() {
   const [darkMode, setDarkMode] = useState(false);
@@ -101,6 +103,18 @@ function Index() {
         transition={{ delay: 1 }}
       >
         <RepoAPI />
+      </motion.div>
+      <motion.div         initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="no_transition"
+        transition={{ delay: 1.2 }}>
+        <Projects />
+      </motion.div>
+      <motion.div  initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="no_transition"
+        transition={{ delay: 1.4 }}>
+      <Contact />
       </motion.div>
       <Footer />
     </div>

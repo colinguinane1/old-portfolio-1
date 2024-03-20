@@ -1,27 +1,42 @@
-import { data } from "autoprefixer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, spring } from "framer-motion";
 
 const RepoAPI = () => {
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [modifiedDate, setModifiedDate] = useState(null);
   const username = "colinguinane1";
   const repo = "PortfolioNEXT";
-  const fetchRepo = async () => {
-    try {
-      const response = await fetch(
-        `https://api.github.com/repos/${username}/${repo}`
-      );
-      if (response.ok) {
-        const data = await response.json();
-        setLastUpdated(data.updated_at);
-      } else {
-        throw new Error("Failed to fetch data");
+  
+  useEffect(( modifiedDate ) => {
+    const fetchRepo = async () => {
+      try {
+        const response = await fetch(
+          `https://api.github.com/repos/${username}/${repo}`
+        );
+        console.log(response.status); // Log the response status
+        if (response.ok) {
+          const data = await response.json();
+          console.log(data.pushed_at)
+          const date = (data.pushed_at);    
+          const stringDate = JSON.stringify(date)
+          const removeCharachters = /[TZ"]/g;
+          
+          const modifiedDate = stringDate.replace(removeCharachters, "  ")
+          
+          console.log(modifiedDate)
+          const dateObj = new Date(String, data.pushed_at);
+          console.log(dateObj.getDay)
+          setModifiedDate(modifiedDate);
+        } else {
+          throw new Error("Failed to fetch data");
+        }
+      } catch (error) {
+        console.error("Error fetching GitHub Repo");
       }
-    } catch (error) {
-      console.error("Error fetching GitHub Repo");
-    }
-  };
-  fetchRepo();
+    };
+
+    fetchRepo();
+  }, [username, repo]);
 
   return (
     <main className="flex flex-col items-center mx-5">
@@ -31,10 +46,10 @@ const RepoAPI = () => {
           <h1 className="font-extrabold text-3xl text-blue-500 px-6">
             Constantly working...
           </h1>
-          <div className="px-5 py-5">
+          <div className="px-5 py-5 text-[10px] md:text-base">
             <motion.div
               initial={{ scale: 1 }}
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.995 }}
               transition={{ duration: 0.2, type: spring }}
               onClick={() =>
@@ -45,9 +60,9 @@ const RepoAPI = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-brand-github-filled dark:stroke-white pt-1 mr-3"
-                width="20"
-                height="20"
+                className="icon icon-tabler icon-tabler-brand-github-filled dark:stroke-white scale-75 md:scale-100 mt-[-2px] ml-[-10px] md:mt-[9px]"
+                width="40"
+                height="40"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="#2c3e50"
@@ -67,14 +82,14 @@ const RepoAPI = () => {
                   <h1 className="font-bold">/colinguinane1/PortfolioNEXT</h1>
                   <button className="bg-green-400 rounded-full w-3 h-3 mt-[1px] mx-1 "></button>
                 </div>
-                <p className="mt-1 -mx-6">
-                  Last Updated:{" "}
-                  <span className="text-gray-600">{lastUpdated}</span>
-                </p>
+                  <p className="mt-1">
+                    Last Updated:
+                    <span className="text-gray-600">{modifiedDate}</span>
+                  </p>
               </div>
             </motion.div>
-            <h1 className="dark:text-white text-black py-3">
-              This is only here so i had an excuse to use an API
+            <h1 className="dark:text-white text-black py-3 text-base">
+              This is only here so I had an excuse to use an API.
             </h1>
           </div>
         </div>
