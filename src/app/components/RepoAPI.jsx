@@ -40,13 +40,13 @@ const RepoAPI = () => {
 
   return (
     <main className="flex flex-col items-center mx-5">
-      <div className="w-full max-w-[64rem] mt-10 ">
+      <div className="w-full max-w-[64rem] mt-10">
         <div className="dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-lg p-3 rounded-md">
           <div className="px-8 pt-4"></div>
           <h1 className="font-extrabold text-3xl text-blue-500 px-6">
             Constantly working...
           </h1>
-          <div className="px-5 py-5 text-[10px] md:text-base">
+          <div className="px-5 py-5 text-[10px] md:text-base z-0">
             <motion.div
               initial={{ scale: 1 }}
               whileHover={{ scale: 1.02 }}
@@ -60,7 +60,7 @@ const RepoAPI = () => {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-brand-github-filled dark:stroke-white scale-75 md:scale-100 mt-[-2px] ml-[-10px] md:mt-[9px]"
+                className="icon icon-tabler icon-tabler-brand-github-filled dark:stroke-white scale-75 md:scale-100 mt-[-2px] ml-[-10px] md:mt-[9px] z-[100]"
                 width="40"
                 height="40"
                 viewBox="0 0 24 24"

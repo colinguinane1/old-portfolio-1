@@ -9,7 +9,7 @@ const Modal = ({ handleClose, content }) => {
     <div className="fixed top-[10rem] md:top-[18rem] flex flex-col items-center max-w-[20rem]">
       <Backdrop onClick={handleClose} />
       <motion.div
-        className="transform bg-white p-6 rounded-md dark:bg-[#31363F] shadow-lg z-[10000] no_transition"
+        className="transform bg-white p-6 rounded-md dark:bg-[#31363F] shadow-lg z-[1000] no_transition"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}
