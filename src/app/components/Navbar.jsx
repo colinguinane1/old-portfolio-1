@@ -12,9 +12,20 @@ const Navbar = ({ closeModal }) => {
     setShowMenu(!showMenu);
     closeModal(); // Close any open modals
   };
-  
+  function scrollToElement(elementId) {
+    const element = document.getElementById(elementId);
+    const navbarHeight = document.getElementById("navbar").offsetHeight + 35;
+    if (element) {
+      const elementTop =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo({
+        top: elementTop - navbarHeight,
+        behavior: "smooth",
+      });
+    }
+  }
   return (
-    <main className='z-[10]'>
+    <main className="z-[10]">
       <div
         id="navbar"
         className="fixed w-screen bg-white backdrop-blur-lg dark:bg-[#31363F] pt-4 border-b border-white dark:border-gray-900 shadow-md p-3 z-[1000]"
@@ -24,16 +35,24 @@ const Navbar = ({ closeModal }) => {
             CG
           </button>
           <li className="hidden lg:block svg_hover border-b-blue-500 hover:border-b">
-            <a href="#">Home</a>
+            <a href="#" onClick={() => scrollToElement("home")}>
+              Home
+            </a>
           </li>
           <li className="hidden lg:block svg_hover border-b-blue-500 hover:border-b">
-            <a href="#">About</a>
+            <a href="#" onClick={() => scrollToElement("about")}>
+              About
+            </a>
           </li>
           <li className="hidden lg:block svg_hover border-b-blue-500 hover:border-b">
-            <a href="#">Projects</a>
+            <a href="#" onClick={() => scrollToElement("projects")}>
+              Projects
+            </a>
           </li>
           <li className="hidden lg:block svg_hover border-b-blue-500 hover:border-b">
-            <a href="#">Contact</a>
+            <a href="#" onClick={() => scrollToElement("contact")}>
+              Contact
+            </a>
           </li>
           <button className="lg:hidden" onClick={toggleMenu}>
             <svg
@@ -57,26 +76,34 @@ const Navbar = ({ closeModal }) => {
         </ul>
       </div>
       <motion.div
-      initial={{marginLeft: "-300vw"}}
-      animate={{ marginLeft: showMenu ? 0 : "-300vw" }}
-      transition={{type: spring}}
-      className="no_transition"
+        initial={{ marginLeft: "-300vw" }}
+        animate={{ marginLeft: showMenu ? 0 : "-300vw" }}
+        transition={{ type: spring }}
+        className="no_transition"
       >
         <ul
           id="sm_navbar"
           className="fixed text-6xl p-6 h-screen mt-12 w-screen border border-white dark:border-[#31363F] shadow-md font-bold z-10 backdrop-blur-lg dark:backdrop-blur-lg text-black dark:text-white"
         >
-          <li className="svg_hover py-4">
-            <a href="#">Home</a>
+          <li className="svg_hover py-4" onClick={toggleMenu}>
+            <a href="#" onClick={() => scrollToElement("home")}>
+              Home
+            </a>
           </li>
-          <li className="svg_hover py-4">
-            <a href="#">About</a>
+          <li className="svg_hover py-4" onClick={toggleMenu}>
+            <a href="#" onClick={() => scrollToElement("about")}>
+              About
+            </a>
           </li>
-          <li className="svg_hover py-4">
-            <a href="#">Projects</a>
+          <li className="svg_hover py-4" onClick={toggleMenu}>
+            <a href="#" onClick={() => scrollToElement("projects")}>
+              Projects
+            </a>
           </li>
-          <li className="svg_hover py-4">
-            <a href="#">Contact</a>
+          <li className="svg_hover py-4" onClick={toggleMenu}>
+            <a href="#" onClick={() => scrollToElement("contact")}>
+              Contact
+            </a>
           </li>
         </ul>
       </motion.div>

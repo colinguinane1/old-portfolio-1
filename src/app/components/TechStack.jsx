@@ -25,7 +25,7 @@ const TechStack = () => {
   };
   return (
     <main className="flex flex-col items-center mx-5">
-      <div className="w-full max-w-[64rem] ">
+      <div id="techstack" className="w-full max-w-[64rem] ">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-lg p-3 rounded-md">
           {/*HTML ICON CONTAINER*/}
           <div

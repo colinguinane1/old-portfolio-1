@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 import { Contact } from "./Contact";
 
 function Index() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
 
   const toggleDarkMode = () => {
@@ -104,17 +104,21 @@ function Index() {
       >
         <RepoAPI />
       </motion.div>
-      <motion.div         initial={{ opacity: 0, y: -100 }}
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         className="no_transition"
-        transition={{ delay: 1.2 }}>
+        transition={{ delay: 1.2 }}
+      >
         <Projects />
       </motion.div>
-      <motion.div  initial={{ opacity: 0, y: -100 }}
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         className="no_transition"
-        transition={{ delay: 1.4 }}>
-      <Contact />
+        transition={{ delay: 1.4 }}
+      >
+        <Contact />
       </motion.div>
       <Footer />
     </div>

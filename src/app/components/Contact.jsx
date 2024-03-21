@@ -29,7 +29,7 @@ export function Contact() {
 
   return (
     <main className="flex flex-col items-center mx-5">
-      <div className="w-full max-w-[64rem] mt-10 ">
+      <div id="contact" className="w-full max-w-[64rem] mt-10 ">
         <div className="dark:bg-[#31363F] bg-white dark:border-[#31363F] border-gray shadow-lg p-3 rounded-md">
           <div className="px-5 py-3">
             <h1 className="font-extrabold text-3xl text-blue-500">Contact</h1>
@@ -69,22 +69,23 @@ export function Contact() {
                 >
                   Submit Form
                 </button>
-                {isSubmitting && !isSubmitted && ( // Conditionally render loading SVG if submitting and not yet submitted
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="animate-spin h-5 w-5 text-blue-500 ml-2"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="none"
-                      stroke="#2c3e50"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M3 12h1m1.28-5.903l.719.718m3.841.765l.836-.836M12 3v1m5.903 1.28l-.718.719m-.765 3.841l.836.836M21 12h-1m-1.28 5.903l-.719-.718m-3.841-.765l-.836.836M12 21v-1m-5.903-1.28l.718-.719m.765-3.841l-.836-.836"
-                    ></path>
-                  </svg>
-                )}
+                {isSubmitting &&
+                  !isSubmitted && ( // Conditionally render loading SVG if submitting and not yet submitted
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="animate-spin h-5 w-5 text-blue-500 ml-2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="none"
+                        stroke="#2c3e50"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M3 12h1m1.28-5.903l.719.718m3.841.765l.836-.836M12 3v1m5.903 1.28l-.718.719m-.765 3.841l.836.836M21 12h-1m-1.28 5.903l-.719-.718m-3.841-.765l-.836.836M12 21v-1m-5.903-1.28l.718-.719m.765-3.841l-.836-.836"
+                      ></path>
+                    </svg>
+                  )}
                 {isSubmitted && ( // Conditionally render check SVG if form is successfully submitted
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

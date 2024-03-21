@@ -4,7 +4,10 @@ import { motion, spring } from "framer-motion";
 function LandingCard() {
   return (
     <main className="flex flex-col items-center h-fit pb-10 mx-5">
-      <div className="border rounded-md shadow-lg border-white dark:border-[#31363F] dark:bg-[#31363F] w-fit max-w-5xl p-10 mt-24 flex flex-col md:flex-row items-center">
+      <div
+        id="home"
+        className="border rounded-md shadow-lg border-white dark:border-[#31363F] dark:bg-[#31363F] w-fit max-w-5xl p-10 mt-24 flex flex-col md:flex-row items-center"
+      >
         <div className="order-2 md:order-1 md:text-left md:mr-4 mb-4 md:mb-0">
           <h1 className="head_text text-left">
             Hi, I&apos;m <span className="gradient_text">Colin</span>
@@ -75,43 +78,41 @@ function LandingCard() {
             {/* source code button*/}
           </div>
           <br></br>
-          <motion.div            
-           initial={{ scale: 0 }}
-           animate={{ scale: 1 }}            
-           transition={{ type: spring, delay: 0.2 }}
-           className='p-0 m-0 w-fit h-fit no_transition'>
-
-          <motion.button           
-            whileHover={{scale: 1.1}}
-            whileTap={{scale: 0.9}}
-
-            
-            onClick={() =>
-              (window.location.href =
-                "https://github.com/colinguinane1/PortfolioNEXT")
-            }
-            className="button_blue_gradient hover:scale-105 active:scale-95 no_transition"
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ type: spring, delay: 0.2 }}
+            className="p-0 m-0 w-fit h-fit no_transition"
           >
-            Source Code
-            <svg
-              className="mt-[2px] pl-1"
-              xmlns="http://www.w3.org/2000/svg"
-              class="icon icon-tabler icon-tabler-arrow-narrow-right"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="#ffffff"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() =>
+                (window.location.href =
+                  "https://github.com/colinguinane1/PortfolioNEXT")
+              }
+              className="button_blue_gradient hover:scale-105 active:scale-95 no_transition"
             >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M5 12l14 0" />
-              <path d="M15 16l4 -4" />
-              <path d="M15 8l4 4" />
-            </svg>
-          </motion.button>
+              Source Code
+              <svg
+                className="mt-[2px] pl-1"
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-arrow-narrow-right"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#ffffff"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 12l14 0" />
+                <path d="M15 16l4 -4" />
+                <path d="M15 8l4 4" />
+              </svg>
+            </motion.button>
           </motion.div>
         </div>
         <div className="order-1 md:order-2">
