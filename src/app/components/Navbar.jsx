@@ -44,7 +44,7 @@ const Navbar = ({ closeModal }) => {
     <main className="z-[10]">
       <div
         id="navbar"
-        className={`fixed w-screen bg-white dark:border-gray-900 bg-transparent backdrop-blur-xl pt-4 ${
+        className={`fixed w-screen dark:border-gray-900 bg-transparent backdrop-blur-xl pt-4 ${
           scrolled ? "border-b shadow-md" : ""
         } p-3 z-[1000]`}      >
         <ul className="flex justify-between mr-10 min-w-60 font-extrabold dark:text-white">
