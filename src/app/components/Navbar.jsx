@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, spring } from "framer-motion";
 import Modal from "./Modal";
@@ -7,10 +7,26 @@ import TechStack from "./TechStack";
 
 const Navbar = ({ closeModal }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 0;
+      setScrolled(isScrolled);
+    };
+
+    // Add scroll event listener when component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Remove event listener when component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-    closeModal(); // Close any open modals
+    closeModal(); 
   };
   function scrollToElement(elementId) {
     const element = document.getElementById(elementId);
@@ -28,10 +44,11 @@ const Navbar = ({ closeModal }) => {
     <main className="z-[10]">
       <div
         id="navbar"
-        className="fixed w-screen bg-white backdrop-blur-lg dark:bg-[#31363F] pt-4 border-b border-white dark:border-gray-900 shadow-md p-3 z-[1000]"
-      >
+        className={`fixed w-screen bg-white dark:border-gray-900 bg-transparent backdrop-blur-xl pt-4 ${
+          scrolled ? "border-b shadow-md" : ""
+        } p-3 z-[1000]`}      >
         <ul className="flex justify-between mr-10 min-w-60 font-extrabold dark:text-white">
-          <button className="font-extrabold text-xl -mt-2 border-2 p-1 text-black hover:text-blue-500 dark:hover:text-blue-500 border-black dark:text-white dark:border-white">
+          <button onClick={() => scrollToElement("home")} className="font-extrabold text-xl -mt-2 border-2 p-1 text-black hover:text-blue-500 dark:hover:text-blue-500 border-black dark:text-white dark:border-white">
             CG
           </button>
           <li className="hidden lg:block svg_hover border-b-blue-500 hover:border-b">
